@@ -1,4 +1,4 @@
-import greeting from "./greet";
-console.log(greeting);
-console.log("hello world for based structure");
-console.log("cmd -> node_modules/.bin/webpack");
+import React from "react";
+import ReactDom from "react-dom";
+import App from "./App";
+ReactDOM.render(<App />, document.getElementById("app"));
