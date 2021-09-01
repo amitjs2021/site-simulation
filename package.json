@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "webpack"
-
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,9 @@
   },
   "homepage": "https://github.com/amitjs2021/site-simulation#readme",
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
   }
