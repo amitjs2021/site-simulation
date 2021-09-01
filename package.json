@@ -1,0 +1,20 @@
+{
+  "name": "site-simulation",
+  "version": "1.0.0",
+  "description": "POC with MVP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitjs2021/site-simulation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitjs2021/site-simulation/issues"
+  },
+  "homepage": "https://github.com/amitjs2021/site-simulation#readme"
+}
