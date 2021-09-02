@@ -1,4 +1,5 @@
 import React from "react";
+import { hot } from "react-hot-loader/root";
 import "./styles.css";
 
 const App = () => {
@@ -8,4 +9,4 @@ const App = () => {
   return `Hello test from react app asdfaaa111 helo ${state.name}`;
 };
 
-export default App;
+export default hot(App);
