@@ -5,7 +5,6 @@ import { hot } from "react-hot-loader/root";
 const Loader = React.lazy(() => import("./Loader"));
 
 import "./styles.css";
-
 const App = () => {
   const state = {
     name: "amit",
