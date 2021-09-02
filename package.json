@@ -4,7 +4,7 @@
   "description": "POC with MVP",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --open --config webpack.config.prod.js",
     "dev": "webpack-dev-server --open --hot --config webpack.config.dev.js"
   },
@@ -27,6 +27,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.1.0",
     "style-loader": "^3.2.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
