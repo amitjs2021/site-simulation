@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-03T04:42:06.799Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="Kk9IvpGMLnyjt5wBBNma" version="15.0.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-09-03T04:58:25.347Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="zULoQdZnheJFrE5KteSg" version="15.0.6" type="github" pages="2">
   <diagram id="tM43H5YGe2w6ltJZeZHz" name="Main Landing">
     <mxGraphModel dx="2245" dy="745" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -86,24 +86,21 @@
     </mxGraphModel>
   </diagram>
   <diagram id="qNiqRFtXUm_oYPR6mVDr" name="Main Page-after siteJSON upload">
-    <mxGraphModel dx="3222" dy="1266" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2245" dy="745" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="fb_Mtw9HvJLZFm7qpWBk-0" />
         <mxCell id="fb_Mtw9HvJLZFm7qpWBk-1" parent="fb_Mtw9HvJLZFm7qpWBk-0" />
-        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
+        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-2" value="&lt;h3 class=&quot;iw&quot; style=&quot;overflow: hidden ; display: block ; font-size: 0.75rem ; font-weight: inherit ; margin: inherit ; text-overflow: ellipsis ; font-family: &amp;#34;roboto&amp;#34; , &amp;#34;robotodraft&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; letter-spacing: 0.3px ; color: rgb(95 , 99 , 104) ; line-height: 20px ; font-style: normal ; text-align: left ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/h3&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
           <mxGeometry x="-810" y="180" width="730" height="730" as="geometry" />
         </mxCell>
         <mxCell id="fb_Mtw9HvJLZFm7qpWBk-3" value="Simulation Session" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
           <mxGeometry x="-620" y="240" width="320" height="30" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;div style=&quot;font-size: 16px;&quot;&gt;Welcome to the Aconex site clearing simulator. This is a map&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;of the site:&lt;/div&gt;" placeholders="1" id="fb_Mtw9HvJLZFm7qpWBk-4">
+        <UserObject label="&lt;div style=&quot;font-size: 16px&quot;&gt;Welcome to the Aconex site clearing simulator.&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;This is a map&amp;nbsp;&lt;span&gt;of the site:&lt;/span&gt;&lt;/div&gt;" placeholders="1" id="fb_Mtw9HvJLZFm7qpWBk-4">
           <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
             <mxGeometry x="-760" y="280" width="600" height="60" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-11" value="&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Action1&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;action2&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;action2&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;Action4&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;strokeColor=#c0c0c0;fillColor=none;overflow=fill;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
-          <mxGeometry x="-720" y="460" width="290" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="fb_Mtw9HvJLZFm7qpWBk-12" value="Action Type" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
           <mxGeometry x="-400" y="460" width="100" height="40" as="geometry" />
         </mxCell>
@@ -122,27 +119,6 @@
         <mxCell id="fb_Mtw9HvJLZFm7qpWBk-23" value="User will ad more action" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
           <mxGeometry x="-253" y="460" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-29" value="&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Action1&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;action2&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;action2&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;Action4&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;strokeColor=#c0c0c0;fillColor=none;overflow=fill;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
-          <mxGeometry x="-720" y="525" width="290" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-30" value="A" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
-          <mxGeometry x="-400" y="525" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-31" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iAddIcon;fillColor=#7AdF78;fillColor2=#1A9917;strokeColor=#ffffff;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
-          <mxGeometry x="-270" y="538" width="17" height="17" as="geometry" />
-        </mxCell>
-        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-32" value="&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Action1&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;action2&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;action2&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;Action4&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;strokeColor=#c0c0c0;fillColor=none;overflow=fill;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
-          <mxGeometry x="-720" y="580" width="290" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-33" value="R" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
-          <mxGeometry x="-400" y="580" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-34" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iAddIcon;fillColor=#7AdF78;fillColor2=#1A9917;strokeColor=#ffffff;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
-          <mxGeometry x="-270" y="593" width="17" height="17" as="geometry" />
-        </mxCell>
-        <mxCell id="fb_Mtw9HvJLZFm7qpWBk-35" value="&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Action1&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;action2&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;action2&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;Action4&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;strokeColor=#c0c0c0;fillColor=none;overflow=fill;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
-          <mxGeometry x="-720" y="630" width="290" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="fb_Mtw9HvJLZFm7qpWBk-36" value="Q" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
           <mxGeometry x="-400" y="630" width="100" height="40" as="geometry" />
         </mxCell>
@@ -151,6 +127,9 @@
         </mxCell>
         <mxCell id="fb_Mtw9HvJLZFm7qpWBk-38" value="On Q process with terminate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="fb_Mtw9HvJLZFm7qpWBk-1" vertex="1">
           <mxGeometry x="-243" y="631.5" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s94_5Ql3vaDE9-mQLm4V-0" value="ootooooooo oooooooToo rrrooooToo rrrroooooo rrrrrtoooo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;fontStyle=1" vertex="1" parent="fb_Mtw9HvJLZFm7qpWBk-1">
+          <mxGeometry x="-810" y="340" width="730" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
