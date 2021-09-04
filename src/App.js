@@ -2,19 +2,21 @@ import React from "react";
 import { hot } from "react-hot-loader/root";
 
 //react lazy to load component Asyn mode
-const Loader = React.lazy(() => import("./Loader"));
+//const Loader = React.lazy(() => import("./Loader"));
 
-import "./styles.css";
+import "./styles/styles.css";
+
 const App = () => {
   const state = {
     name: "amit",
   };
   return (
     <>
-      `Hello test from react app asdfaaa111 helo ${state.name}`
+      <UploadComponent />
+      {/* `Hello test from react app asdfaaa111 helo ${state.name}`
       <React.Suspense fallback={null}>
         <Loader />
-      </React.Suspense>
+      </React.Suspense> */}
     </>
   );
 };

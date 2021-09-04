@@ -7,7 +7,8 @@
     "test": "jest",
     "build": "webpack --open --config webpack.config.prod.js",
     "dev": "webpack-dev-server --open --hot --config webpack.config.dev.js",
-    "format": "pretty-quick"
+    "format": "pretty-quick",
+    "server":"node api/server.js"
   },
   "repository": {
     "type": "git",
