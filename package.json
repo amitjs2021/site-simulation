@@ -8,7 +8,7 @@
     "build": "webpack --open --config webpack.config.prod.js",
     "dev": "webpack-dev-server --open --hot --config webpack.config.dev.js",
     "format": "pretty-quick",
-    "server":"node api/server.js"
+    "server": "nodemon api/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "url": "https://github.com/amitjs2021/site-simulation/issues"
   },
   "homepage": "https://github.com/amitjs2021/site-simulation#readme",
+  "proxy": "http://localhost:3000",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
@@ -29,12 +30,17 @@
     "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
+    "axios": "^0.21.2",
     "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.1",
+    "cors": "^2.8.5",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.25.1",
+    "express-fileupload": "^1.2.1",
     "html-webpack-plugin": "^5.3.2",
     "jest": "^27.1.0",
+    "multer": "^1.4.3",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
     "style-loader": "^3.2.1",
