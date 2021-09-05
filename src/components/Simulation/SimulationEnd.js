@@ -1,5 +1,9 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
+/**
+ * 
+ * @returns Return final simulation result, only visible after simulation ends.
+ */
 const SimulationEnd = () => {
   return (
     <>

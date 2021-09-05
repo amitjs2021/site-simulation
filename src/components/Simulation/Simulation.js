@@ -8,6 +8,7 @@ import Actions from "./Actions";
 import Sitemap from "./Sitemap";
 import SimulationEnd from "./SimulationEnd";
 
+
 const useStyles = makeStyles((theme) => ({
     icon: {
         marginRight: theme.spacing(2),
@@ -26,8 +27,78 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+/**
+ * 
+ * @return simulation component 
+ * 
+ */
+
+/** Action Contant to generic use or central action are if any action change in future we don't need to do it all places */
+export const ACTIONS = {
+    RIGHT: 'Right',
+    LEFT: 'Left',
+    ADVANCE: 'Advance',
+    QUIT: 'Quit'
+
+}
+
+
+/** Simplutaion reducer for state and action management */
+const simulateReducer = (events, action) => {
+    console.log("events :::--- ", events)
+    console.log("action in reducer :: ", action)
+
+    switch (action.type) {
+        case ACTIONS.RIGHT:
+            return events.map(event => {
+                if (event.id === action.payload.id && action.payload.directionValue !== 'R') {
+                    event.directionCount = 0
+                }
+                // if (event.id === action.payload.id && action.payload.directionValue === 'R') {
+                //     console.log("inside map ", events, " count + ", action.payload.directionCount + 1,)
+                //     return { ...event, directionValue: action.payload.directionValue, directionCount: action.payload.directionCount + 1 }
+                // }
+                return event
+
+            })
+        case ACTIONS.LEFT:
+            console.log("inside action left ")
+            return events.map(event => {
+                if (event.id === action.payload.id && action.payload.directionValue === 'L') {
+                    console.log("inside map ", events, " count + ", action.payload.directionCount + 1,)
+                    return { ...event, directionValue: action.payload.directionValue, directionCount: action.payload.directionCount + 1 }
+                }
+                return event
+
+            })
+
+        case ACTIONS.ADVANCE:
+            return
+        case ACTIONS.QUIT:
+            return
+        default:
+            return events
+
+    }
+
+}
+
+
+
+
+
+function newDirections() {
+    return { id: Date.now(), directionValue: "", directionCount: 0 };
+}
+
 const Simulation = (props) => {
     const classes = useStyles();
+    const [directions, dispatch] = useReducer(simulateReducer, [newDirections()])
+    const [qAction, setQAction] = useState(false)
+
+
+    console.log(" inside componnet :: ", directions)
+
 
     return (
         <>
@@ -44,10 +115,7 @@ const Simulation = (props) => {
                         <Sitemap />
 
                         <div className={classes.actonButton}>
-                            <Actions />
-                            <Actions />
-                            <Actions />
-                            <Actions />
+                            {directions.map(direction => <Actions key={directions.id} dispatch={dispatch} direction={direction} />)}
                         </div>
                     </Container>
                 </div>

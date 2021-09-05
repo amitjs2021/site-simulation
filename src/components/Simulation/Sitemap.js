@@ -1,5 +1,10 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
+
+/**
+ * 
+ * @returns Sitemap from uploaded file
+ */
 const Sitemap = () => {
   return (
     <>
