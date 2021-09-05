@@ -13,13 +13,8 @@ const App = () => {
   };
   return (
     <>
-      <h1>hello from main </h1>
       <Simulation />
       {/* <UploadFile /> */}
-      {/* `Hello test from react app asdfaaa111 helo ${state.name}`
-      <React.Suspense fallback={null}>
-        <Loader />
-      </React.Suspense> */}
     </>
   );
 };
