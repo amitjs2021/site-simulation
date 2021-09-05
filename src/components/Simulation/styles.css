@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.actions {
+  width: 400px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid green;
+  list-style: none;
+  padding: 5px;
+}
+
+/* li.item {
+  margin: 0 0 10px 0;
+} */
+.item {
+  margin: 5px;
+  background-color: blue;
+}
