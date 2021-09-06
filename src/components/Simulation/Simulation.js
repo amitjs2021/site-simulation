@@ -38,8 +38,24 @@ export const ACTIONS = {
     RIGHT: 'Right',
     LEFT: 'Left',
     ADVANCE: 'Advance',
-    QUIT: 'Quit'
+    QUIT: 'Quit',
+    ADD: 'Add-Row',
+    DELETE: 'Delete-Row',
+}
 
+
+const getCurrentState = (events, action, type) => {
+    return events.map(event => {
+        if (event.id === action.payload.id && action.payload.directionValue === type) {
+            console.log("action.payload.directionCount : ", action.payload.directionCount < 1, "action.payload.directionCount : ", action.payload.directionCount)
+            if (event.directionValue != action.payload.directionValue) {
+                return { ...event, directionValue: action.payload.directionValue, directionCount: 1 }
+            }
+            return { ...event, directionValue: action.payload.directionValue, directionCount: action.payload.directionCount + 1 }
+        }
+        return event
+
+    })
 }
 
 
@@ -50,32 +66,46 @@ const simulateReducer = (events, action) => {
 
     switch (action.type) {
         case ACTIONS.RIGHT:
-            return events.map(event => {
-                if (event.id === action.payload.id && action.payload.directionValue !== 'R') {
-                    event.directionCount = 0
-                }
-                // if (event.id === action.payload.id && action.payload.directionValue === 'R') {
-                //     console.log("inside map ", events, " count + ", action.payload.directionCount + 1,)
-                //     return { ...event, directionValue: action.payload.directionValue, directionCount: action.payload.directionCount + 1 }
-                // }
-                return event
+            return getCurrentState(events, action, 'R')
+        //     return events.map(event => {
+        //         if (event.id === action.payload.id && action.payload.directionValue === 'R') {
+        //             console.log("action.payload.directionCount : ", action.payload.directionCount < 1, "action.payload.directionCount : ", action.payload.directionCount)
+        //             if (event.directionValue != action.payload.directionValue) {
+        //                 return { ...event, directionValue: action.payload.directionValue, directionCount: 1 }
+        //             }
+        //             return { ...event, directionValue: action.payload.directionValue, directionCount: action.payload.directionCount + 1 }
+        //         }
+        //         return event
 
-            })
+        //     })
         case ACTIONS.LEFT:
             console.log("inside action left ")
-            return events.map(event => {
-                if (event.id === action.payload.id && action.payload.directionValue === 'L') {
-                    console.log("inside map ", events, " count + ", action.payload.directionCount + 1,)
-                    return { ...event, directionValue: action.payload.directionValue, directionCount: action.payload.directionCount + 1 }
-                }
-                return event
-
-            })
-
+            return getCurrentState(events, action, 'L')
+        // return events.map(event => {
+        //     if (event.id === action.payload.id && action.payload.directionValue === 'L') {
+        //         if (event.directionValue != action.payload.directionValue) {
+        //             return { ...event, directionValue: action.payload.directionValue, directionCount: 1 }
+        //         }
+        //         return { ...event, directionValue: action.payload.directionValue, directionCount: action.payload.directionCount + 1 }
+        //     }
+        //     return event
+        // })
         case ACTIONS.ADVANCE:
-            return
+            return getCurrentState(events, action, 'A')
+        // return events.map(event => {
+        //     if (event.id === action.payload.id && action.payload.directionValue === 'A') {
+        //         if (event.directionValue != action.payload.directionValue) {
+        //             return { ...event, directionValue: action.payload.directionValue, directionCount: 1 }
+        //         }
+        //         return { ...event, directionValue: action.payload.directionValue, directionCount: action.payload.directionCount + 1 }
+        //     }
+        //     return event
+
+        // })
         case ACTIONS.QUIT:
-            return
+            return event
+        case ACTIONS.ADD:
+            return [...event, newDirections()]
         default:
             return events
 
@@ -88,14 +118,13 @@ const simulateReducer = (events, action) => {
 
 
 function newDirections() {
-    return { id: Date.now(), directionValue: "", directionCount: 0 };
+    return { id: Math.random(Date.now()), directionValue: '', directionCount: 0 };
 }
 
 const Simulation = (props) => {
     const classes = useStyles();
-    const [directions, dispatch] = useReducer(simulateReducer, [newDirections()])
+    const [directions, dispatch] = useReducer(simulateReducer, [newDirections(), newDirections()])
     const [qAction, setQAction] = useState(false)
-
 
     console.log(" inside componnet :: ", directions)
 
@@ -113,7 +142,6 @@ const Simulation = (props) => {
                             the site:
                         </Typography>
                         <Sitemap />
-
                         <div className={classes.actonButton}>
                             {directions.map(direction => <Actions key={directions.id} dispatch={dispatch} direction={direction} />)}
                         </div>

@@ -9,6 +9,7 @@ import ACTIONS from './Simulation'
 
 const Actions = ({ dispatch, direction }) => {
     console.log("action ::: ", direction)
+
     return (
         <>
             <Grid container spacing={2} justifyContent="center">
@@ -17,6 +18,7 @@ const Actions = ({ dispatch, direction }) => {
                         Left
                     </Button>
                 </Grid>
+
                 <Grid item>
                     <Button variant="contained" color="primary" aria-label="Right Button" onClick={() => dispatch({ type: "Right", payload: { id: direction.id, directionCount: +direction.directionCount, directionValue: "R" } })}>
                         Right
@@ -27,11 +29,11 @@ const Actions = ({ dispatch, direction }) => {
                         Advance
                     </Button>
                 </Grid>
-                <Grid item>
+                {/* <Grid item>
                     <Button variant="contained" color="secondary" aria-label="Quit Button" onClick={() => dispatch({ type: "Quit", payload: { id: direction.id, directionCount: +direction.directionCount, directionValue: "Q" } })}>
                         Quit
                     </Button>
-                </Grid>
+                </Grid> */}
 
                 <Grid item>
                     <Typography variant="h5" align="center" color="textPrimary">
@@ -43,10 +45,10 @@ const Actions = ({ dispatch, direction }) => {
                         {direction.directionCount}
                     </Typography>
                 </Grid>
-                <Grid item>
-                    <AddCircle aria-label="Add New Action" style={{ cursor: 'pointer' }} onClick={() => console.log("asdf")}></AddCircle>
+                {/* <Grid item>
+                    <AddCircle aria-label="Add New Action" style={{ cursor: 'pointer' }} ></AddCircle>
                     <RemoveCircle aria-label="Remove Current Action" style={{ cursor: 'pointer' }} onClick={() => console.log("asdf")}></RemoveCircle>
-                </Grid>
+                </Grid> */}
             </Grid>
 
         </>
