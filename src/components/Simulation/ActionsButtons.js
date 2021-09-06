@@ -3,7 +3,7 @@ import { Button, Grid, Typography } from "@material-ui/core";
 import { AddCircle, RemoveCircle } from "@material-ui/icons";
 import { ACTIONS } from './Actions'
 
-const ActionsButtons = ({ direction, dispatch }) => {
+const ActionsButtons = ({ direction, dispatch, handleQuitAction, qAction }) => {
     return (
         <>
             <Grid container spacing={2} justifyContent="center">
@@ -12,6 +12,7 @@ const ActionsButtons = ({ direction, dispatch }) => {
                         variant="contained"
                         color="primary"
                         aria-label="Left Button"
+                        disabled={qAction}
                         onClick={() =>
                             dispatch({
                                 type: ACTIONS.LEFT,
@@ -19,6 +20,7 @@ const ActionsButtons = ({ direction, dispatch }) => {
                                     id: direction.id,
                                     directionCount: +direction.directionCount,
                                     directionValue: "L",
+                                    quit: false,
                                 },
                             })
                         }
@@ -32,6 +34,7 @@ const ActionsButtons = ({ direction, dispatch }) => {
                         variant="contained"
                         color="primary"
                         aria-label="Right Button"
+                        disabled={qAction}
                         onClick={() =>
                             dispatch({
                                 type: ACTIONS.RIGHT,
@@ -39,6 +42,7 @@ const ActionsButtons = ({ direction, dispatch }) => {
                                     id: direction.id,
                                     directionCount: +direction.directionCount,
                                     directionValue: "R",
+                                    quit: false,
                                 },
                             })
                         }
@@ -51,6 +55,7 @@ const ActionsButtons = ({ direction, dispatch }) => {
                         variant="contained"
                         color="primary"
                         aria-label="Advance Button"
+                        disabled={qAction}
                         onClick={() =>
                             dispatch({
                                 type: ACTIONS.ADVANCE,
@@ -58,6 +63,7 @@ const ActionsButtons = ({ direction, dispatch }) => {
                                     id: direction.id,
                                     directionCount: +direction.directionCount,
                                     directionValue: "A",
+                                    quit: false,
                                 },
                             })
                         }
@@ -70,11 +76,25 @@ const ActionsButtons = ({ direction, dispatch }) => {
                         variant="contained"
                         color="secondary"
                         aria-label="Quit Button"
+                        onClick={() => {
+                            console.log("quit")
+                            handleQuitAction()
+                        }
+                        }
+                    >
+                        Quit
+                    </Button>
+                    {/* commenting dispatch way , I will use if required, idea is to broadcast quit event for all consumer elements wil be disabled.
+                    <Button
+                        variant="contained"
+                        color="secondary"
+                        aria-label="Quit Button"
                         onClick={() =>
                             dispatch({
                                 type: ACTIONS.QUIT,
                                 payload: {
                                     id: direction.id,
+                                    directionCount: direction.directionCount,
                                     directionValue: "Q",
                                     quit: true,
 
@@ -83,7 +103,8 @@ const ActionsButtons = ({ direction, dispatch }) => {
                         }
                     >
                         Quit
-                    </Button>
+                    </Button> */}
+
                 </Grid>
 
                 <Grid item>

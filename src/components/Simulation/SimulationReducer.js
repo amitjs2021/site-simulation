@@ -4,6 +4,7 @@ import { ACTIONS } from './Actions'
 //@getCurrentState will return current updated  state
 const getCurrentState = (events, action, type) => {
     return events.map((event) => {
+
         if (event.id === action.payload.id && action.payload.directionValue === type) {
             if (event.directionValue != action.payload.directionValue) {
                 return {

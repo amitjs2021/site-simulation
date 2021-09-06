@@ -33,11 +33,11 @@ const Simulation = (props) => {
     const [qAction, setQAction] = useState(false);
 
     const handleQuitAction = () => {
-        console.log("quit action")
         setQAction(true);
     };
 
-    console.log(" inside componnet :: ", directions);
+    //console.log(" inside componnet :: ", directions);
+
 
     return (
         <>
@@ -58,6 +58,8 @@ const Simulation = (props) => {
                                     key={directions.id}
                                     dispatch={dispatch}
                                     direction={direction}
+                                    handleQuitAction={handleQuitAction}
+                                    qAction={qAction}
 
                                 />
                             ))}
