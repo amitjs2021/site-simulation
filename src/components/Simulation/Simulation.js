@@ -36,7 +36,7 @@ const Simulation = (props) => {
         setQAction(true);
     };
 
-    //console.log(" inside componnet :: ", directions);
+    console.log(" inside componnet :: ", directions);
 
 
     return (
@@ -68,7 +68,7 @@ const Simulation = (props) => {
                 </div>
             </main>
             <footer>
-                <SimulationEnd />
+                {qAction ? <SimulationEnd directions={directions} /> : <Typography align="center" color="textSecondary" paragraph> Simulation is in progress .....</Typography>}
             </footer>
         </>
     );
