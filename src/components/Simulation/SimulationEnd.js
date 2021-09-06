@@ -18,4 +18,4 @@ const SimulationEnd = () => {
   );
 };
 
-export default SimulationEnd;
+export default SimulationEnd
