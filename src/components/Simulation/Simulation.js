@@ -33,10 +33,13 @@ const Simulation = (props) => {
     const [qAction, setQAction] = useState(false);
 
     const handleQuitAction = () => {
-        setQAction(true);
+        /** quit will not active if value is blank  */
+        if (directions[0].directionValue != "") {
+            setQAction(true);
+        }
     };
 
-    console.log(" inside componnet :: ", directions);
+    console.log(" inside component :: ", directions);
 
 
     return (

@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
  * @returns Return final simulation result, only visible after simulation ends.
  */
 const SimulationEnd = ({ directions }) => {
+
   const directionKeys = {
     'L': 'Turn Left',
     'R': 'Turn Right',

@@ -118,7 +118,7 @@ const ActionsButtons = ({ direction, dispatch, handleQuitAction, qAction }) => {
                     </Typography>
                 </Grid>
                 <Grid item>
-                    <AddCircle
+                    {!qAction ? <AddCircle
                         aria-label="Add New Action"
                         style={{ cursor: "pointer" }}
                         color="primary"
@@ -127,9 +127,8 @@ const ActionsButtons = ({ direction, dispatch, handleQuitAction, qAction }) => {
                                 type: ACTIONS.ADD,
                                 payload: { id: Math.random(Date.now()), directionValue: "", directionCount: 0 }
                             })
-                        }
-                    ></AddCircle>
-                    <RemoveCircle
+                        } /> : <AddCircle aria-label="Add New Action" color="disabled" />}
+                    {!qAction ? <RemoveCircle
                         aria-label="Remove Current Action"
                         style={{ cursor: "pointer" }}
                         color="secondary"
@@ -138,8 +137,7 @@ const ActionsButtons = ({ direction, dispatch, handleQuitAction, qAction }) => {
                                 type: ACTIONS.DELETE,
                                 payload: { id: direction.id }
                             })
-                        }
-                    ></RemoveCircle>
+                        } /> : <RemoveCircle ria-label="Remove Current Action" color="disabled" />}
                 </Grid>
             </Grid>
         </>
