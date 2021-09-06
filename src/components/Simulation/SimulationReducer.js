@@ -10,6 +10,7 @@ const getCurrentState = (events, action, type) => {
                     ...event,
                     directionValue: action.payload.directionValue,
                     directionCount: 1,
+                    quit: action.payload.quit
                 };
             }
             return {
@@ -28,18 +29,15 @@ export function newDirections() {
 
 /** Simulation reducer for state and action management */
 export const SimulateReducer = (events, action) => {
-    console.log("events :::--- ", events);
-    console.log("action in reducer :: ", action);
     switch (action.type) {
         case ACTIONS.RIGHT:
             return getCurrentState(events, action, "R");
         case ACTIONS.LEFT:
-            console.log("inside action left ");
             return getCurrentState(events, action, "L");
         case ACTIONS.ADVANCE:
             return getCurrentState(events, action, "A");
         case ACTIONS.QUIT:
-            return events;
+            return getCurrentState(events, action, "Q");
         case ACTIONS.ADD:
             return [...events, newDirections()];
         case ACTIONS.DELETE:

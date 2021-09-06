@@ -1,11 +1,9 @@
 import React from "react";
-import { Button, Grid } from "@material-ui/core";
+import { Button, Grid, Typography } from "@material-ui/core";
 import { AddCircle, RemoveCircle } from "@material-ui/icons";
-import Typography from "@material-ui/core/Typography";
 import { ACTIONS } from './Actions'
 
 const ActionsButtons = ({ direction, dispatch }) => {
-    console.log("action ::: ", direction);
     return (
         <>
             <Grid container spacing={2} justifyContent="center">
@@ -73,7 +71,15 @@ const ActionsButtons = ({ direction, dispatch }) => {
                         color="secondary"
                         aria-label="Quit Button"
                         onClick={() =>
-                            console.log("quict")
+                            dispatch({
+                                type: ACTIONS.QUIT,
+                                payload: {
+                                    id: direction.id,
+                                    directionValue: "Q",
+                                    quit: true,
+
+                                },
+                            })
                         }
                     >
                         Quit
@@ -94,6 +100,7 @@ const ActionsButtons = ({ direction, dispatch }) => {
                     <AddCircle
                         aria-label="Add New Action"
                         style={{ cursor: "pointer" }}
+                        color="primary"
                         onClick={() =>
                             dispatch({
                                 type: ACTIONS.ADD,
@@ -104,7 +111,7 @@ const ActionsButtons = ({ direction, dispatch }) => {
                     <RemoveCircle
                         aria-label="Remove Current Action"
                         style={{ cursor: "pointer" }}
-
+                        color="secondary"
                         onClick={() =>
                             dispatch({
                                 type: ACTIONS.DELETE,

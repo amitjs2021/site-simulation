@@ -1,9 +1,8 @@
 import React, { useState, useReducer, useEffect } from "react";
-import { Container } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
+import { Container, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-/* local import from here */
+/* local imports from here */
 import ActionsButtons from "./ActionsButtons";
 import Sitemap from "./Sitemap";
 import SimulationEnd from "./SimulationEnd";
@@ -39,7 +38,6 @@ const Simulation = (props) => {
     };
 
     console.log(" inside componnet :: ", directions);
-    console.log("setQAction  ", qAction)
 
     return (
         <>
