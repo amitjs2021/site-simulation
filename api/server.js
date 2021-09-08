@@ -16,14 +16,32 @@ app.use(fileUpload());
 
 //file reading from path for now only sitemap.txt is fixed file name use
 var usersFilePath = path.join(__dirname, 'uploadfiles/sitemap.txt');
-console.log(usersFilePath)
 
 // file reader api in SYNC mode - we can convert this in non-blocking mode if require
 app.get('/api/v1/maps', function (req, res) {
-  var readable = fs.createReadStream(usersFilePath);
-  readable.pipe(res)
+  fs.readFile(usersFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    console.log(data)
+    res.json({
+      Status: 'Success',
+      body: data
+    }
+    )
+
+  })
 
 });
+
+
+
+
+
+
+
+
 
 // file upload api
 app.post('/api/v1/upload', (req, res) => {
