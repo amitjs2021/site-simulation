@@ -1,11 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@material-ui/core";
 import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
@@ -27,37 +22,43 @@ const useStyles = makeStyles((theme) => ({
 const Upload = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
-  const [file, setFile] = useState(null);
-  // const [fullWidth, setFullWidth] = useState(true);
-  // const [maxWidth, setMaxWidth] = useState("sm");
+  const [file, setFile] = useState(''); // storing the uploaded file
+  // storing the recived file from backend
+  const [data, getFile] = useState({ name: "", path: "" });
+  const [progress, setProgess] = useState(0); // progess bar
+  const el = useRef(); // accesing input element
 
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  // };
+  const handleChange = (e) => {
+    setProgess(0)
+    const file = e.target.files[0]; // accessing file
+    console.log(file);
+    setFile(file); // storing file
+  }
+
+  const uploadFile = () => {
+    const formData = new FormData();
+    formData.append('file', file); // appending file
+    axios.post('http://localhost:4500/api/v1/upload', formData, {
+      onUploadProgress: (ProgressEvent) => {
+        let progress = Math.round(
+          ProgressEvent.loaded / ProgressEvent.total * 100) + '%';
+        setProgess(progress);
+      }
+    }).then(res => {
+      console.log(res);
+      getFile({
+        name: res.data.name,
+        path: 'http://localhost:4500' + res.data.path
+      })
+    }).catch(err => console.log(err))
+  }
+
 
   const handleClose = () => {
     setOpen(false);
   };
 
-  const fileSetForUpload = (evt) => {
-    evt.preventDefault();
-    console.log(evt.target.files[0]);
-    setFile(evt.target.files[0]);
-  };
 
-  function uploadFile() {
-    var data = new FormData();
-    data.append("file", file);
-
-    const reaponse = fetch("http://localhost:3000/api/v1/upload", {
-      method: "POST",
-      body: data,
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
-    console.log("File :: ", file, " data --- ", data);
-  }
 
   return (
     <>
@@ -71,23 +72,21 @@ const Upload = () => {
           <DialogContentText>
             Simulation Session, Welcome to the Aconex site clearing simulator.
           </DialogContentText>
-          <form
-            className={classes.form}
-            noValidate
-            encType="multipart/form-data"
-          >
-            <label htmlFor="myfile">Select a file:</label>
-            <input
-              type="file"
-              id="myfile"
-              name="myfile"
-              onChange={fileSetForUpload}
-            />
-            <Button onClick={uploadFile}>Upload Site-Map</Button>
-          </form>
+
+
+          <input type="file" ref={el} onChange={handleChange} />
+          <br />
+
+          <Button variant="contained" onClick={uploadFile}>
+            Upload File
+          </Button>
+          <hr />
+          {/* displaying received image*/}
+          Fil updated name : {data.path && data.name}
+
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} color="primary" >
             Close
           </Button>
         </DialogActions>

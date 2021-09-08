@@ -13,8 +13,8 @@ const App = () => {
   };
   return (
     <>
+      <UploadFile />
       <Simulation />
-      {/* <UploadFile /> */}
     </>
   );
 };
