@@ -27,4 +27,4 @@ POC with MVP
 - If user refresh then only he will fetch new data from sitemap and some for directions flow, if count is more then two if type field is empty still allowing user to create new row.
 
 #images
-![plot](./Screen Shot 2021-09-06 at 5.51.20 pm)
+![plot](Screen Shot 2021-09-06 at 5.51.20 pm)
