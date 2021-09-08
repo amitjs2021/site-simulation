@@ -13,7 +13,7 @@ POC with MVP
 - Entry component for Simulation is APP.js (we can use any name for now used APP).
 - Currently PORT is hard coded , we can read from .dotEnv file as well.
 - Currently PROXY is not set inside API call (simulation) - using hardcoded links 'http://locatlho4500/api/v1' - whic is not correct but for the the time being using this.
-- Simulation app is using PORT 3000.
+- Simulation app is using PORT http://localhost:9000/.
 - Once app starts it will automatically launch simulation main page (where upload screen will visible first)
 
 # Assumtions and Open issues:
