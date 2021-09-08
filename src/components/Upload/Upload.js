@@ -50,6 +50,7 @@ const Upload = () => {
         name: res.data.name,
         path: 'http://localhost:4500' + res.data.path
       })
+
     }).catch(err => console.log(err))
   }
 

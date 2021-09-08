@@ -22,7 +22,7 @@
     "url": "https://github.com/amitjs2021/site-simulation/issues"
   },
   "homepage": "https://github.com/amitjs2021/site-simulation#readme",
-
+  "proxy": "http://localhost:4500",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
@@ -45,7 +45,6 @@
     "multer": "^1.4.3",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
-    "react-fetch-hook": "^1.8.5",
     "style-loader": "^3.2.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",

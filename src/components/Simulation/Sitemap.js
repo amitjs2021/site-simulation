@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import useFetch from "react-fetch-hook"
 import Typography from "@material-ui/core/Typography";
 
 /**
@@ -8,13 +7,6 @@ import Typography from "@material-ui/core/Typography";
  */
 const Sitemap = () => {
   const [siteMap, setSiteMap] = useState('');
-
-
-
-
-  // const { data } = useFetch("http://localhost:4500/api/v1/maps");
-  // console.log("sitemap ", data);
-
   useEffect(() => {
     fetch('http://localhost:4500/api/v1/maps')
       .then(res => res.json())

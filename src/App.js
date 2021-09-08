@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { hot } from "react-hot-loader/root";
 import { UploadFile, Simulation } from "./components";
 
@@ -8,9 +8,7 @@ import { UploadFile, Simulation } from "./components";
 import "./styles/styles.css";
 
 const App = () => {
-  const state = {
-    name: "amit",
-  };
+
   return (
     <>
       <UploadFile />

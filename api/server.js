@@ -35,14 +35,6 @@ app.get('/api/v1/maps', function (req, res) {
 
 });
 
-
-
-
-
-
-
-
-
 // file upload api
 app.post('/api/v1/upload', (req, res) => {
   if (!req.files) {
@@ -57,7 +49,7 @@ app.post('/api/v1/upload', (req, res) => {
       console.log(err)
       return res.status(500).send({ msg: "Error occured" });
     }
-    // returing the response with file path and name
+    // returning the response with file path and name
     return res.send({ name: myFile.name, path: `/${myFile.name}` });
   });
 })
