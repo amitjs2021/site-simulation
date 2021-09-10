@@ -39,9 +39,6 @@ const Simulation = (props) => {
         }
     };
 
-    console.log(" inside component :: ", directions);
-
-
     return (
         <>
             <main>
