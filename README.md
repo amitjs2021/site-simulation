@@ -18,7 +18,7 @@ POC with MVP
 
 # Assumtions and Open issues:
 
-- Whenever the user opens localhost://3000 - will always open the UPLOAD page (which is annoying for now, we handle this as well).
+- Whenever the user opens localhost:9000 - will always open the UPLOAD page (which is annoying for now, we handle this as well).
 - For now, all files type are allowed to upload - but the only sitemap.txt is reading for API return.
 - NO unit test covered yet (will ad later).
 - Once the user uploads sitemap.txt then the screen will show file name and 100% status, then users need to take action to close this screen.
