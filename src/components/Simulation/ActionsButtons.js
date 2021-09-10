@@ -77,7 +77,6 @@ const ActionsButtons = ({ direction, dispatch, handleQuitAction, qAction }) => {
                         color="secondary"
                         aria-label="Quit Button"
                         onClick={() => {
-                            console.log("quit")
                             handleQuitAction()
                         }
                         }
